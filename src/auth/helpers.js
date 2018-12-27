@@ -57,7 +57,7 @@ export default {
   fakeLogin (creds, redirect) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        auth.storeToken({data: { accessToken: '123456789', refreshToken: '77777777' }})
+        auth.storeToken({ data: { accessToken: '123456789', refreshToken: '77777777' } })
         if (redirect) router.push({ name: redirect })
         resolve({})
       }, 500)
