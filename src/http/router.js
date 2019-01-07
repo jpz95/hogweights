@@ -13,6 +13,7 @@ Vue.use(Router)
  * @param  {Function} next Callback for passing a route to be called next.
  * @return {void}
  */
+/* eslint-disable */
 function guardRoute (to, from, next) {
   // work-around to get to the Vuex store (as of Vue 2.0)
   const auth = router.app.$options.store.state.auth
@@ -23,6 +24,7 @@ function guardRoute (to, from, next) {
     next()
   }
 }
+/* eslint-enable */
 
 /**
  * The Router instance containing all the routes for the application.
@@ -41,7 +43,8 @@ const router = new Router({
       store.dispatch('common/updateLayout', route.layout)
 
       // Auth navigation guard.
-      if (!route.isPublic) return guardRoute(to, from, next)
+      // ignore auth for now..
+      // if (!route.isPublic) return guardRoute(to, from, next)
 
       next()
     }
