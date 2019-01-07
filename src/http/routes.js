@@ -6,7 +6,7 @@ const routes = [
   {
     name: 'home',
     path: '/home',
-    component: () => import(/* webpackChunkName: "home" */ '@/features/home/Home.vue'),
+    component: () => import(/* webpackChunkName: "home" */ '@/features/home/home.vue'),
     title: 'Home',
     layout: 'DefaultLayout',
     isPublic: true
