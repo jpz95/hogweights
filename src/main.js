@@ -5,8 +5,8 @@ import { http, router } from './http'
 import auth from './auth'
 import Vuetify from 'vuetify'
 import App from './app'
-/* import Appbar from './components/app-bar'
-import Appfooter from './components/app-footer' */
+import AppToolbar from '@/components/layout/app-bar'
+import AppFooter from '@/components/layout/app-footer'
 
 Vue.config.productionTip = false
 
@@ -34,8 +34,8 @@ require('./styles/scss/main.scss')
 require('./styles/stylus/main.styl')
 
 // Global Components
-/* Vue.component('Appbar', Appbar)
-Vue.component('Appfooter', Appfooter) */
+Vue.component('AppToolbar', AppToolbar)
+Vue.component('AppFooter', AppFooter)
 
 new Vue({
   router,

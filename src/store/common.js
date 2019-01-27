@@ -1,7 +1,7 @@
 // Common State.
 const defaults = {
   sidebar: {
-    visible: true
+    visible: false
   },
   title: '',
   layout: 'DefaultLayout',

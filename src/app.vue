@@ -25,14 +25,21 @@ export default {
 
   mounted () {
     // Update page title.
-    this.$store.watch((state) => {
-      return state.common.title
-    }, (title) => {
-      document.title = title
-      console.log('title updated')
-    }, {
-      deep: true
-    })
+    this.$store.watch(
+      // Watch for 'title' updates
+      state => {
+        return state.common.title
+      },
+      // Callback on change
+      title => {
+        document.title = title
+        console.log('title updated')
+      },
+      // Additional ptions
+      {
+        // Watch for nested value changes
+        deep: true
+      })
   }
 }
 </script>

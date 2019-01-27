@@ -14,4 +14,4 @@ export const REFRESH_TOKEN_URL = '/auth'
  *
  * @type {string}
  */
-export const STORAGE_KEY = 'vue-pizza'
+export const STORAGE_KEY = 'hogweights'
