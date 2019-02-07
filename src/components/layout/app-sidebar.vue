@@ -19,12 +19,12 @@
         v-list-tile(slot="activator" ripple)
           v-list-tile-content
             v-list-tile-title {{ $store.state.auth.user.name }}
-        v-list-tile(ripple :to="{ name: 'account' }")
+        v-list-tile(ripple :to="{ name: 'home' }")
           v-list-tile-action
             v-icon account_box
           v-list-tile-content
             v-list-tile-title Account
-        v-list-tile(ripple :to="{ name: 'settings' }")
+        v-list-tile(ripple :to="{ name: 'home' }")
           v-list-tile-action
             v-icon settings
           v-list-tile-content
@@ -32,13 +32,13 @@
 
     v-divider
     v-list(dark)
-      v-list-tile(ripple :to="{ name: 'tutorial' }")
+      v-list-tile(ripple :to="{ name: 'home' }")
         v-list-tile-action
           v-icon library_books
         v-list-tile-content
           v-list-tile-title Tutorial
 
-      v-list-tile(ripple :to="{ name: 'dashboard' }")
+      v-list-tile(ripple :to="{ name: 'home' }")
         v-list-tile-action
           v-icon dashboard
         v-list-tile-content
@@ -48,7 +48,7 @@
         v-list-tile(slot="activator" ripple)
           v-list-tile-content
             v-list-tile-title More
-        v-list-tile(ripple :to="{ name: 'importMyData' }")
+        v-list-tile(ripple :to="{ name: 'home' }")
           v-list-tile-content
             v-list-tile-title More Here
 </template>
