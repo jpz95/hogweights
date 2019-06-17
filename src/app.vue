@@ -1,8 +1,9 @@
-<template lang="pug">
-  #app
-    img(src='./assets/logo.png' alt='Vue logo')
-    component(v-bind:is="component")
-      slot
+<template>
+  <div id="app">
+    <component :is="component">
+      <slot />
+    </component>
+  </div>
 </template>
 
 <script>
@@ -33,7 +34,6 @@ export default {
       // Callback on change
       title => {
         document.title = title
-        console.log('title updated')
       },
       // Additional ptions
       {
@@ -51,6 +51,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

@@ -31,6 +31,15 @@ module.exports = {
     'generator-star-spacing': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    "quotes": ['error', 'single'],
+    'quotes': ['warn', 'single'],
+    'vue/component-name-in-template-casing': ['warn', 'kebab-case'],
+    'vue/max-attributes-per-line': ['warn', {
+      'singleline': 3
+    }],
+    'vue/html-self-closing': ['warn', {
+      'html': {
+        'component': 'any'
+      }
+    }]
   }
 }
